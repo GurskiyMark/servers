@@ -1,13 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "src/index.ts", "use": "@vercel/node" }
+    { "src": "server_1/index.ts", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/blogs", "dest": "src/index.ts" },
-    { "src": "/blogs/(.*)", "dest": "src/index.ts" },
-    { "src": "/posts", "dest": "src/index.ts" },
-    { "src": "/posts/(.*)", "dest": "src/index.ts" },
-    { "src": "/testing/all-data", "dest": "src/index.ts" }
+    { "src": "/blogs", "dest": "server_1/index.ts" },
+    { "src": "/blogs/(.*)", "dest": "server_1/index.ts" },
+    { "src": "/posts", "dest": "server_1/index.ts" },
+    { "src": "/posts/(.*)", "dest": "server_1/index.ts" },
+    { "src": "/testing/all-data", "dest": "server_1/index.ts" }
   ]
 }
