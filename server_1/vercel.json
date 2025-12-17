@@ -1,13 +1,10 @@
 {
   "version": 2,
+  "name": "ServersServer_1",
   "builds": [
-    { "src": "server_1/dist/index.js", "use": "@vercel/node" }
+    { "src": "server_1/src/index.ts", "use": "@vercel/node" } 
   ],
   "routes": [
-    { "src": "/blogs", "dest": "server_1/dist/index.js" },
-    { "src": "/blogs/(.*)", "dest": "server_1/dist/index.js" },
-    { "src": "/posts", "dest": "server_1/dist/index.js" },
-    { "src": "/posts/(.*)", "dest": "server_1/dist/index.js" },
-    { "src": "/testing/all-data", "dest": "server_1/dist/index.js" }
+    { "src": "/(.*)", "dest": "server_1/src/index.ts" }
   ]
 }
