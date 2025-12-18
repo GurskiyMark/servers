@@ -1,3 +1,4 @@
+import serverless from 'serverless-http';
 import express from 'express';
 import { HttpStatus } from './enums';
 import { blogsRouter } from './routes/blogs-router';
@@ -13,3 +14,6 @@ app.get('/', (_req, res) => {
 app.use('/testing/all-data', testingRouter)
 app.use('/blogs', blogsRouter);
 app.use('/posts', postsRouter);
+
+
+export default serverless(app);
